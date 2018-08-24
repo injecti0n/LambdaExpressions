@@ -18,4 +18,11 @@ public class TextPrinter {
 	   public String toString() {
 	      return sentence;
 	   }
+	   
+	   public void printProcessedWords(WordProcessor processor) {
+		   for (String s : sentence.split(" ")) {
+			String processedWord = processor.process(s);
+			System.out.println(processedWord);
+		}
+	   }
 	}
